@@ -28,6 +28,11 @@ body {
   opacity: 0.7;
 }
 
+#blanks{
+  color: black;
+  font-weight: bold;
+}
+
 #cssMessage {
   display: none;
 }
