@@ -18,7 +18,8 @@ $(document).ready(function() {
     }
     if (environmentInput != "front" && foodInput === "Pizza") {
       alert("We suggest taking the PHP/Drupal track at Epicodus.")
-    } else if (environmentInput != "front" && companyInput != "small" && foodInput === "BBQ") {
+    } else if (environmentInput != "front" && companyInput != "small" &&
+      foodInput === "BBQ") {
       $("#cSharpMessage").slideDown("slow");
     } else {
       $("#javaMessage").fadeToggle("slow");
