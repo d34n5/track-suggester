@@ -17,10 +17,15 @@ body {
 }
 
 .container {
+  margin: 5px;
   background-image: url(http://www.zoowhiz.com/wp-content/uploads/2014/11/Learning-Pathways-graphic-02.png);
-  background-size: 100%;
+  background-size: contain;
   background-position: center bottom;
   background-repeat: no-repeat;
+}
+
+.form-group {
+  opacity: 0.7;
 }
 
 #cssMessage {

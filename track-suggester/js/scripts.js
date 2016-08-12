@@ -22,7 +22,7 @@ $(document).ready(function() {
       foodInput === "BBQ") {
       $("#cSharpMessage").slideDown("slow");
     } else {
-      $("#javaMessage").fadeToggle("slow");
+      $("#javaMessage").fadeIn("slow");
     }
     event.preventDefault();
   });
