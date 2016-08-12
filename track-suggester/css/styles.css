@@ -21,3 +21,11 @@ body {
 #cssMessage {
   display: none;
 }
+
+#cSharpMessage {
+  display: none;
+}
+
+#javaMessage {
+  display: none;
+}

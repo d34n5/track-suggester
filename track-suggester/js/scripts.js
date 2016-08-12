@@ -7,8 +7,24 @@ $(document).ready(function(){
     var usersInput = $("#users").val();
     var foodInput = $("#food").val();
 
+    $(".firstName").text(firstNameInput);
+
     if (environmentInput === "front" ){
       $("#cssMessage").show();
+    }
+
+    if (companyInput === "large"){
+      $("#cSharpMessage").show();
+    } else if (companyInput === "small"){
+      $("#javaMessage").show();
+    }
+
+    if (foodInput === "Pizza"){
+      alert("We suggest taking the PHP/Drupal track at Epicodus.")
+    } else if (foodInput === "BBQ"){
+      $("#cSharpMessage").show();
+    } else {
+      $("#javaMessage").show();
     }
 
 
