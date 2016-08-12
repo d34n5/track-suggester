@@ -1,9 +1,19 @@
 body {
-  background-image: url(http://www.zoowhiz.com/wp-content/uploads/2014/11/Learning-Pathways-graphic-02.png);
-  background-size: 100%;
-  background-position: bottom;
+  margin: 5%;
 }
+
 .jumbotron {
   text-align: center;
   background-color: lavender;
+}
+
+.form-group {
+  font-size: 1.25em;
+}
+
+.container {
+  background-image: url(http://www.zoowhiz.com/wp-content/uploads/2014/11/Learning-Pathways-graphic-02.png);
+  background-size: 100%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
 }
