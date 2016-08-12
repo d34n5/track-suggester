@@ -9,19 +9,19 @@ $(document).ready(function() {
     $(".firstName").text(firstNameInput);
     // --- ^^Business Logic^^ --- vvUser Logicvv ---
     if (environmentInput === "front") {
-      $("#cssMessage").show();
+      $("#cssMessage").fadeIn("slow");
     }
     if (environmentInput != "front" && companyInput === "large") {
-      $("#cSharpMessage").show();
+      $("#cSharpMessage").fadeOut("slow");
     } else if (environmentInput != "front" && companyInput === "small") {
-      $("#javaMessage").show();
+      $("#javaMessage").slideUp("slow");
     }
     if (environmentInput != "front" && foodInput === "Pizza") {
       alert("We suggest taking the PHP/Drupal track at Epicodus.")
     } else if (environmentInput != "front" && companyInput != "small" && foodInput === "BBQ") {
-      $("#cSharpMessage").show();
+      $("#cSharpMessage").slideDown("slow");
     } else {
-      $("#javaMessage").show();
+      $("#javaMessage").fadeToggle("slow");
     }
     event.preventDefault();
   });
