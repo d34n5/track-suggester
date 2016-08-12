@@ -1,108 +1,118 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-3.1.0.min.js"></script>
-    <script src="js/scripts.js"></script>
-    <title>Epicodus Track Suggester</title>
-  </head>
-  <body>
-    <div class="jumbotron">
-      <h1>Epicodus Track Suggester</h1>
-    </div>
-    <div class="container">
-      <div class="row col-xl-6 col-xl-offset-3" id="blanks">
-        <form id="epicodus">
-          <div class="form-group">
-            <label for="firstName">First Name</label>
-            <input id="firstName" class="form-control" type="text">
+<head>
+  <meta charset="utf-8">
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.1.0.min.js">
+  </script>
+  <script src="js/scripts.js">
+  </script>
+  <title>Epicodus Track Suggester</title>
+</head>
+<body>
+  <div class="jumbotron">
+    <h1>Epicodus Track Suggester</h1>
+  </div>
+  <div class="container">
+    <div class="row col-xl-6 col-xl-offset-3" id="blanks">
+      <form id="epicodus" name="epicodus">
+        <div class="form-group">
+          <label for="firstName">First Name</label> <input class="form-control"
+          id="firstName" type="text">
+        </div>
+        <div class="form-group">
+          <div id="environment">
+            <label for="environment">Would you prefer to focus on front-end
+            design or back-end development?</label>
+            <div class="radio">
+              <label><input name="environment" type="radio" value="front">
+              Front-End Design</label>
+            </div>
+            <div class="radio">
+              <label><input name="environment" type="radio" value="back">
+              Back-End Development</label>
+            </div>
+            <div class="radio">
+              <label><input name="environment" type="radio" value=
+              "nopreference"> No Preference</label>
+            </div>
           </div>
-          <div class="form-group">
-            <div id="environment">
-             <label for="environment">Would you prefer to focus on front-end design or back-end development?</label>
-               <div class="radio">
-                 <label>
-                   <input type="radio" name="environment" value="front">
-                   Front-End Design
-                 </label>
-               </div>
-               <div class="radio">
-                 <label>
-                   <input type="radio" name="environment" value="back">
-                   Back-End Development
-                 </label>
-               </div>
-               <div class="radio">
-                 <label>
-                   <input type="radio" name="environment" value="nopreference">
-                   No Preference
-                 </label>
-               </div>
-             </div>
+        </div>
+        <div class="form-group">
+          <div id="company">
+            <label for="company">Would you prefer to work for a large or small
+            company?</label>
+            <div class="radio">
+              <label><input name="company" type="radio" value="large"> Large
+              Established Corporation</label>
+            </div>
+            <div class="radio">
+              <label><input name="company" type="radio" value="small"> Small
+              Fledgling Start-Up</label>
+            </div>
+            <div class="radio">
+              <label><input name="company" type="radio" value="nopref"> No
+              preference</label>
+            </div>
           </div>
-
-          <div class="form-group">
-            <div id="company">
-             <label for="company">Would you prefer to work for a large or small company?</label>
-               <div class="radio">
-                 <label>
-                   <input type="radio" name="company" value="large">
-                   Large Established Corporation
-                 </label>
-               </div>
-               <div class="radio">
-                 <label>
-                   <input type="radio" name="company" value="small">
-                   Small Fledgling Start-Up
-                 </label>
-               </div>
-               <div class="radio">
-                 <label>
-                   <input type="radio" name="company" value="nopref">
-                   No preference
-                 </label>
-               </div>
-             </div>
-          </div>
-          <div class="form-group">
+        </div>
+        <div class="form-group">
           <label for="content">Would you prefer to obsess over:</label>
           <select class="form-control" id="content">
-            <option>A.  Layout, colors &amp; navigation</option>
-            <option>B. Content &amp; branding across large complex sites</option>
-            </select>
-          </div>
-          <div class="form-group">
-          <label for="users">Would you prefer to work on projects with heavy or light user interaction?</label>
-          <select class="form-control" id="users">
-            <option>A.  Heavy</option>
-            <option>B.  Light</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="food">What is your Favorite Food?</label><br>
-            <select class="form-control" id="food">
-              <option>Pizza</option>
-              <option>BBQ</option>
-              <option>Tacos</option>
-              <option>Pad Thai</option>
-            </select>
-          </div>
-          <br>
-          <br>
-          <button type="submit" class="btn btn-success">Submit Survey</button>
-        </form>
-      </div>
-      <div id="cssMessage">
-        <h2>Thank you <span class="firstName"></span> for completing this survey.  We suggest you try the CSS/Design track at Epicodus!</h2>
-      </div>
-      <div id="cSharpMessage">
-        <h2>Thank you <span class="firstName"></span> for completing this survey.  We suggest you try the C#/.NET track at Epicodus!</h2>
-      </div>
-      <div id="javaMessage">
-        <h2>Thank you <span class="firstName"></span> for completing this survey.  We suggest you try the Java/Android track at Epicodus!</h2>
-      </div>
+            <option>
+              A. Layout, colors &amp; navigation
+            </option>
+            <option>
+              B. Content &amp; branding across large complex sites
+            </option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="users">Would you prefer to work on projects with heavy or
+          light user interaction?</label> <select class="form-control" id=
+          "users">
+            <option>
+              A. Heavy
+            </option>
+            <option>
+              B. Light
+            </option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="food">What is your Favorite Food?</label><br>
+          <select class="form-control" id="food">
+            <option>
+              Pizza
+            </option>
+            <option>
+              BBQ
+            </option>
+            <option>
+              Tacos
+            </option>
+            <option>
+              Pad Thai
+            </option>
+          </select>
+        </div><br>
+        <br>
+        <button class="btn btn-success" type="submit">Submit Survey</button>
+      </form>
     </div>
-  </body>
+    <div id="cssMessage">
+      <h2>Thank you <span class="firstName"></span> for completing this survey.
+      We suggest you try the CSS/Design track at Epicodus!</h2>
+    </div>
+    <div id="cSharpMessage">
+      <h2>Thank you <span class="firstName"></span> for completing this survey.
+      We suggest you try the C#/.NET track at Epicodus!</h2>
+    </div>
+    <div id="javaMessage">
+      <h2>Thank you <span class="firstName"></span> for completing this survey.
+      We suggest you try the Java/Android track at Epicodus!</h2>
+    </div>
+  </div>
+</body>
 </html>
