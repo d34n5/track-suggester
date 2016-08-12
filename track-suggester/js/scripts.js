@@ -7,17 +7,18 @@ $(document).ready(function() {
     var usersInput = $("#users").val();
     var foodInput = $("#food").val();
     $(".firstName").text(firstNameInput);
+    // --- ^^Business Logic^^ --- vvUser Logicvv ---
     if (environmentInput === "front") {
       $("#cssMessage").show();
     }
-    if (companyInput === "large") {
+    if (environmentInput != "front" && companyInput === "large") {
       $("#cSharpMessage").show();
-    } else if (companyInput === "small") {
+    } else if (environmentInput != "front" && companyInput === "small") {
       $("#javaMessage").show();
     }
-    if (foodInput === "Pizza") {
+    if (environmentInput != "front" && foodInput === "Pizza") {
       alert("We suggest taking the PHP/Drupal track at Epicodus.")
-    } else if (foodInput === "BBQ") {
+    } else if (environmentInput != "front" && foodInput === "BBQ") {
       $("#cSharpMessage").show();
     } else {
       $("#javaMessage").show();

@@ -1,10 +1,15 @@
 body {
   margin: 5%;
+  background-color: ivory;
 }
+
 
 .jumbotron {
   text-align: center;
-  background-color: #e6e6fa;
+  background-image: url(http://gallery.yopriceville.com/var/albums/Nature/Forest_Trail_Landscape_Wallpaper.jpg?m=1370300400);
+  background-size: cover;
+  background-position: bottom;
+  color: white;
 }
 
 .form-group {
